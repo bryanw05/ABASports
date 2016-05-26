@@ -8,11 +8,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-public class LeadersFragment extends Fragment {
+public class HighlightsFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.leaders_layout,null);
+        return inflater.inflate(R.layout.highlights_layout,null);
     }
 }

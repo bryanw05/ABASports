@@ -63,9 +63,9 @@ public class TabFragment extends Fragment {
         public Fragment getItem(int position)
         {
             switch (position){
-                case 0 : return new ScheduleFragment();
-                case 1 : return new TopStoriesFragment();
-                case 2 : return new LeadersFragment();
+                case 0 : return new TopStoriesFragment();
+                case 1 : return new POGFragment();
+                case 2 : return new HighlightsFragment();
             }
             return null;
         }
@@ -86,11 +86,11 @@ public class TabFragment extends Fragment {
 
             switch (position){
                 case 0 :
-                    return "Schedule";
-                case 1 :
                     return "Top Stories";
+                case 1 :
+                    return "Player of the Game";
                 case 2 :
-                    return "Leaders";
+                    return "Highlights";
             }
             return null;
         }

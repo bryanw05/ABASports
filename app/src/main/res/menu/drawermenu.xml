@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item android:title="Schedule"
+          android:id="@+id/nav_item_schedule"
+        />
 
-
-    <item android:title="Inbox"
-        android:id="@+id/nav_item_inbox"
+    <item android:title="Teams"
+        android:id="@+id/nav_item_teams"
       />
 
-    <item android:title="Sent"
+    <item android:title="Standings"
         android:id="@+id/nav_item_sent"
         />
 
-    <item android:title="Drafts"
+    <item android:title="Players"
         android:id="@+id/nav_item_draft"
         />
 
+    <item android:title="Stats"/>
 
+    <item android:title="Rules"/>
 
-    <item android:title="Others">
-        <menu>
-            <item
-                android:title="Spam"
-                />
-            <item
-                android:title="Bin"
-                />
-        </menu>
-    </item>
+    <item android:title="Staff"/>
+
+    <item android:title="About"/>
+    <!--
+    Put 'Rules' and 'Staff' under "About"
+    -->
 
     <group android:id="@+id/group_settings_id">
 
         <item android:title="Settings"
             />
-        <item android:title="Help"
+        <item android:title="Login"
             />
     </group>
 

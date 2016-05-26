@@ -12,7 +12,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/orange"
+        android:background="@color/lightblue"
         android:id="@+id/toolbar"
         app:title="ABASports"
         />
@@ -40,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="start"
-            android:id="@+id/shitstuff"
+            android:id="@+id/contents"
             app:itemTextColor="@color/black"
             app:menu="@menu/drawermenu"
             android:layout_marginTop="-24dp"
