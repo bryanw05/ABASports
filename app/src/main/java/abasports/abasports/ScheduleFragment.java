@@ -8,11 +8,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-public class UpdatesFragment extends Fragment {
+public class ScheduleFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.updates_layout,null);
+        return inflater.inflate(R.layout.schedule_layout,null);
     }
 }
