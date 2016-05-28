@@ -1,17 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:stretchColumns="0,1,2">
 
     <TableRow
-        android:gravity="center">
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/white"
+        >
+        <ImageButton
+            android:id="@+id/previousDay"
+            android:src="@drawable/arrow_left1"
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_horizontal"
+             />
         <TextView
             android:id="@+id/date"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
+            android:layout_gravity="center|center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             />
+
+        <ImageButton
+            android:id="@+id/nextDay"
+            android:src="@drawable/arrow_right1"
+            android:background="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="right|center_horizontal"
+             />
     </TableRow>
 
+    <TableLayout
+        android:id="@+id/schedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
+        >
 
+    </TableLayout>
 </TableLayout>
