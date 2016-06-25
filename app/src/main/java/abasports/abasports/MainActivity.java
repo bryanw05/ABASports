@@ -64,6 +64,12 @@ public class MainActivity extends AppCompatActivity{
                     xfragmentTransaction.replace(R.id.containerView,new TabFragment()).commit();
                 }
 
+                if(menuItem.getItemId() == R.id.nav_item_login){
+                    FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.replace(R.id.containerView, new LoginFragment()).commit();
+                }
+
                 return false;
             }
 
