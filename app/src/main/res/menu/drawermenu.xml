@@ -3,6 +3,7 @@
 
     <item android:title="Schedule"
           android:id="@+id/nav_item_schedule"
+          android:icon="@drawable/calendar_icon"
         />
 
     <item android:title="Teams"
@@ -11,10 +12,12 @@
 
     <item android:title="Standings"
         android:id="@+id/nav_item_sent"
+        android:icon="@drawable/standingsicon"
         />
 
     <item android:title="Players"
         android:id="@+id/nav_item_draft"
+        android:icon="@drawable/group44"
         />
 
     <item android:title="Stats"/>
