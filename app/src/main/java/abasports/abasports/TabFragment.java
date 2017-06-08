@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+
 public class TabFragment extends Fragment {
 
     public static TabLayout tabLayout;
@@ -96,4 +97,4 @@ public class TabFragment extends Fragment {
         }
     }
 
-}
+}//end TabFragment

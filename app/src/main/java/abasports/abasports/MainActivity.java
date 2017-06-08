@@ -2,17 +2,15 @@ package abasports.abasports;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
-import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity{
+
+public class MainActivity extends AppCompatActivity {
     DrawerLayout mDrawerLayout;
     NavigationView mNavigationView;
     FragmentManager mFragmentManager;
@@ -56,12 +54,13 @@ public class MainActivity extends AppCompatActivity{
                 if (menuItem.getItemId() == R.id.nav_item_sent) {
                     FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
                     fragmentTransaction.addToBackStack(null);
-                    fragmentTransaction.replace(R.id.containerView,new SentFragment()).commit();
+                    fragmentTransaction.replace(R.id.containerView,new Standings()).commit();
                 }
 
                 if (menuItem.getItemId() == R.id.nav_item_teams) {
-                    FragmentTransaction xfragmentTransaction = mFragmentManager.beginTransaction();
-                    xfragmentTransaction.replace(R.id.containerView,new TabFragment()).commit();
+                    FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.replace(R.id.containerView,new TeamFragment()).commit();
                 }
 
                 if(menuItem.getItemId() == R.id.nav_item_login){
@@ -87,5 +86,5 @@ public class MainActivity extends AppCompatActivity{
 
         mDrawerToggle.syncState();
 
-    }
-}
+    }//end onCreate()
+}//end MainActivity()
