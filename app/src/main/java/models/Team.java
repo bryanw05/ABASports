@@ -8,6 +8,7 @@ public class Team {
         private ArrayList<EmptyPlayer> players;
         private String division;
         private String streak;
+        private String roster;
         private int wins;
         private int losses;
         private double winPercentage;
@@ -21,13 +22,14 @@ public class Team {
             winPercentage = 0;
         }
 
-        public Team(String team_Name, String division, int games_won, int games_lost, String current_streak) {
+        public Team(String team_Name, String division, int games_won, int games_lost, String current_streak, String roster) {
             name = team_Name;
             this.division = division;
             wins = games_won;
             losses = games_lost;
             streak = current_streak;
             winPercentage = calcPercentage();
+            this.roster = roster;
         }
 
         public Team(String teamname, ArrayList<EmptyPlayer> p){
@@ -94,17 +96,21 @@ public class Team {
             return streak;
         }
 
+        public String getRoster(){
+            return roster;
+        }
+
         public void setStreak(String streak) {
             this.streak = streak;
         }
 
-        public String showRoster(){
-            String roster="";
-            for (int i = 0; i < players.size(); i++){
-                roster += players.get(i).fullname()+ "\n";
-            }
-            return roster;
-        }
+//        public String showRoster(){
+//            String roster="";
+//            for (int i = 0; i < players.size(); i++){
+//                roster += players.get(i).fullname() + "\n";
+//            }
+//            return roster;
+//        }
 
         public double calcPercentage(){
             if(wins == 0)
@@ -127,9 +133,9 @@ public class Team {
                 return null;
             }
         }
-
+        @Override
         public String toString(){
-            return name + "\n" + "record:" + wins + " - " + losses + "\n" + showRoster();
+            return name + "\n" + "record:" + wins + " - " + losses + "\n";
         }
 }
 

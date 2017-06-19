@@ -8,7 +8,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 
+import models.EmptyPlayer;
 import models.Team;
 import models.TeamInfo;
 
@@ -26,6 +28,7 @@ public class TeamProfileActivity extends FragmentActivity {
         TextView Record = (TextView) findViewById(R.id.textView5);
         TextView Streak = (TextView) findViewById(R.id.textView6);
         TextView Win = (TextView) findViewById(R.id.textView7);
+        TextView Roster = (TextView) findViewById(R.id.textView9);
 
         if (getIntent().getExtras() != null) {
             Bundle bundle = getIntent().getExtras();
@@ -39,8 +42,7 @@ public class TeamProfileActivity extends FragmentActivity {
                 Record.setText(theTeam.getRecord());
                 Streak.setText(theTeam.getStreak());
                 Win.setText(df.format(theTeam.getWinPercentage()));
-
+                Roster.setText(theTeam.getRoster());
         }
     }
-
 }

@@ -7,4 +7,10 @@ import retrofit2.http.GET;
  public interface ABAInterface {
          @GET("jsonteams.php")
          Call<ArrayList<Team>> getStringResult();
+
+        @GET("jsonplayers.php")
+        Call<ArrayList<Player>> getStringResult2();
+
+        @GET("getleaders.php")
+        Call<ArrayList<Player>> getStringResult3();
 }

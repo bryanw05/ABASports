@@ -11,12 +11,12 @@
       />
 
     <item android:title="Standings"
-        android:id="@+id/nav_item_sent"
+        android:id="@+id/nav_item_standings"
         android:icon="@drawable/standingsicon"
         />
 
     <item android:title="Players"
-        android:id="@+id/nav_item_draft"
+        android:id="@+id/nav_item_players"
         android:icon="@drawable/group44"
         />
 

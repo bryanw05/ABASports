@@ -2,38 +2,38 @@ package models;
 
 public class EmptyPlayer {
 
-    protected String firstname;
-    protected String lastname;
+    protected String first_name;
+    protected String last_name;
     protected String team;
     protected int ID;
 
     public EmptyPlayer(){}
 
-    public EmptyPlayer(int id){
-        ID = id;
+    public EmptyPlayer(int ID){
+        this.ID = ID;
     }
 
-    public EmptyPlayer(String firstname, String lastname, String team){
+    public EmptyPlayer(String first_name, String last_name, String team){
         super();
-        this.firstname = firstname;
-        this.lastname = lastname;
+        this.first_name = first_name;
+        this.last_name = last_name;
         this.team = team;
     }
 
     public String getFirstname(){
-        return firstname;
+        return first_name;
     }
 
-    public void setFirstname(String firstname){
-        this.firstname = firstname;
+    public void setFirstname(String first_name){
+        this.first_name = first_name;
     }
 
     public String getLastname(){
-        return lastname;
+        return last_name;
     }
 
-    public void setLastname(String lastname){
-        this.lastname = lastname;
+    public void setLastname(String last_name){
+        this.last_name = last_name;
     }
 
     public String getTeam(){
@@ -48,12 +48,12 @@ public class EmptyPlayer {
         return ID;
     }
 
-    public void setID(int id){
-        this.ID = id;
+    public void setID(int ID){
+        this.ID = ID;
     }
 
     public String fullname(){
-        return lastname + ", " + firstname;
+        return last_name + ", " + first_name;
     }
 
     /* (non-Javadoc)
@@ -74,11 +74,11 @@ public class EmptyPlayer {
         if (ID != other.ID) {
             return false;
         }
-        if (lastname == null) {
-            if (other.lastname != null) {
+        if (last_name == null) {
+            if (other.last_name != null) {
                 return false;
             }
-        } else if (!lastname.equals(other.lastname)) {
+        } else if (!last_name.equals(other.last_name)) {
             return false;
         }
         return true;

@@ -13,15 +13,15 @@ public class Player extends EmptyPlayer{
 
     public Player(String fullname){
         int space = fullname.indexOf(" ");
-        firstname = fullname.substring(0, space);
-        lastname = fullname.substring(space + 1);
+        first_name = fullname.substring(0, space);
+        last_name = fullname.substring(space + 1);
     }
 
-    public Player(String firstname, String lastname, String team,int number, int points, int rebounds, int assists, int steals
+    public Player(String first_name, String last_name, String team,int number, int points, int rebounds, int assists, int steals
                     , int foul){
         super();
-        this.firstname = firstname;
-        this.lastname = lastname;
+        this.first_name = first_name;
+        this.last_name = last_name;
         this.team = team;
         this.number = number;
         this.points = points;
@@ -32,19 +32,19 @@ public class Player extends EmptyPlayer{
     }
 
     public String getFirstname() {
-        return firstname;
+        return first_name;
     }
 
     public void setFirstname(String firstName) {
-        this.firstname = firstName;
+        this.first_name = firstName;
     }
 
     public String getLastname() {
-        return lastname;
+        return last_name;
     }
 
     public void setLastname(String lastName) {
-        this.lastname = lastName;
+        this.last_name = lastName;
     }
 
     public String getTeam() {
@@ -112,8 +112,8 @@ public class Player extends EmptyPlayer{
     public int hashcode(){
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((firstname == null) ? 0: firstname.hashCode());
-        result = prime * result + ((lastname == null ) ? 0: lastname.hashCode());
+        result = prime * result + ((first_name == null) ? 0: first_name.hashCode());
+        result = prime * result + ((last_name == null ) ? 0: last_name.hashCode());
         result = prime * result + number;
         return result;
     }

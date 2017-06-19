@@ -31,12 +31,15 @@ public class TeamFragment extends Fragment {
     TableLayout team_table;
     TeamInfo t = TeamInfo.getInstance();
 
+    public TeamFragment(){} //empty constructor
+
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.teams_layout, null);
 
-        team_table = (TableLayout)rootView.findViewById(R.id.teams);
+        team_table = (TableLayout) rootView.findViewById(R.id.teams);
         team_table.setStretchAllColumns(true);
 
         Retrofit retrofit = new Retrofit.Builder()
@@ -51,9 +54,9 @@ public class TeamFragment extends Fragment {
             @Override
             public void onResponse(Call<ArrayList<Team>> call, Response<ArrayList<Team>> response) {
                 try {
-                    ArrayList<Team> TeamName = response.body();
+                    ArrayList<Team> TeamName = response.body(); //retrieve JSON objects
                         for (int i = 0; i < TeamName.size(); i++) {
-                            t.addTeam(TeamName.get(i));
+                            t.addTeam(TeamName.get(i)); //add teams into Team object from TeamInfo
                         }
 
                     final ArrayList<Team> teams = t.getData();

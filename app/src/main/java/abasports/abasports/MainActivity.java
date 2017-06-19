@@ -51,16 +51,22 @@ public class MainActivity extends AppCompatActivity {
                     fragmentTransaction.replace(R.id.containerView, new ScheduleFragment()).commit();
                 }
 
-                if (menuItem.getItemId() == R.id.nav_item_sent) {
+                if (menuItem.getItemId() == R.id.nav_item_teams) {
+                    FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.replace(R.id.containerView,new TeamFragment()).commit();
+                }
+
+                if (menuItem.getItemId() == R.id.nav_item_standings) {
                     FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
                     fragmentTransaction.addToBackStack(null);
                     fragmentTransaction.replace(R.id.containerView,new Standings()).commit();
                 }
 
-                if (menuItem.getItemId() == R.id.nav_item_teams) {
+                if (menuItem.getItemId() == R.id.nav_item_players){
                     FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
                     fragmentTransaction.addToBackStack(null);
-                    fragmentTransaction.replace(R.id.containerView,new TeamFragment()).commit();
+                    fragmentTransaction.replace(R.id.containerView, new PlayersFragment()).commit();
                 }
 
                 if(menuItem.getItemId() == R.id.nav_item_login){
